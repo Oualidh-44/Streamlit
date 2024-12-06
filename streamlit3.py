@@ -82,3 +82,14 @@ elif st.session_state.get("authentication_status") is False:
 else:
     # Champs non remplis
     st.warning("Les champs username et mot de passe doivent être remplis.")
+
+
+# Initialiser une clé pour gérer l'état de connexion
+if "logged_in" not in st.session_state:
+    st.session_state.logged_in = True  # Par défaut, l'utilisateur est connecté
+
+
+# Ajouter un bouton de déconnexion
+if st.sidebar.button("Se déconnecter"):
+    st.session_state.logged_in = False
+    st.sidebar.write("Vous avez été déconnecté !")

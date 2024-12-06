@@ -58,7 +58,7 @@ def photos():
 
 # Authentification
 authenticator.login()
-
+s
 if st.session_state.get("authentication_status"):
     # Utilisateur authentifié
     authenticator.logout("Déconnexion", key="logout")

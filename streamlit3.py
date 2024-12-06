@@ -60,9 +60,6 @@ def photos():
 authenticator.login()
 
 if st.session_state.get("authentication_status"):
-    # Utilisateur authentifié
-    authenticator.logout("Déconnexion", key="logout")
-
     # Barre latérale pour la navigation
     st.sidebar.title("Navigation")
     choix = st.sidebar.radio(
